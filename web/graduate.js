@@ -1,8 +1,14 @@
 
 
-requirejs(['jquery', 'lib/web3', 'lib/Graduate'],
-  function ($, web3, Graduate) {
+requirejs(['jquery', 'lib/web3', 'lib/Graduate', 'lib/queryParser'],
+  function ($, web3, graduate, queryParser) {
     $(document).ready(function () {
+
+      const queries = queryParser.parse();
+      if (queries['contract-address']) {
+        $('#contract-address').val(queries['contract-address']);
+      }
+
 
       $("#issue").click(function () {
         const name = $("#student-name").val();
@@ -14,6 +20,7 @@ requirejs(['jquery', 'lib/web3', 'lib/Graduate'],
           id,
           password
         })
+        const graduateInstance = graduate.get();
       });
     })
   });
