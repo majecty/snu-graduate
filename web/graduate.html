@@ -21,9 +21,7 @@
   </div>
 
   <div>
-    <h1>졸업 증명 추가</h1>
-
-
+    <h1>졸업증 발행</h1>
     <div>
       <div>
         <div class="field-wrap">
@@ -59,32 +57,26 @@
     </div>
   </div>
 
-  <div class="table-responsive">
-    <table class="table table-bordered">
-      <thead>
-        <tr>
-          <th>Candidate</th>
-          <th>Votes</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Rama</td>
-          <td id="candidate-1"></td>
-        </tr>
-        <tr>
-          <td>Nick</td>
-          <td id="candidate-2"></td>
-        </tr>
-        <tr>
-          <td>Jose</td>
-          <td id="candidate-3"></td>
-        </tr>
-      </tbody>
-    </table>
+
+
+
+  <div>
+    <h1>졸업증 확인</h1>
+
+    <div>
+      <div>
+        <div class="field-wrap">
+          <label>
+            이메일
+          </label>
+          <input id="query-email" type="text" required autocomplete="off" />
+        </div>
+      </div>
+
+      <button id="verify" class="button button-block" />확인</button>
+    </div>
   </div>
-  <input type="text" id="candidate" />
-  <a href="#" onclick="voteForCandidate()" class="btn btn-primary">Vote</a>
+
 </body>
 <script src="https://cdn.rawgit.com/ethereum/web3.js/develop/dist/web3.js"></script>
 

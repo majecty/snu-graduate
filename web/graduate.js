@@ -12,6 +12,7 @@ requirejs(['jquery', 'lib/web3', 'lib/Graduate', 'lib/queryParser', 'crypto-js/a
           $(`#${htmlId}`).val(queries[htmlId]);
         }
       }
+      $("#query-email").val(queries["student-email"]);
 
       $("#issue").click(function () {
         const name = $("#student-name").val();
@@ -41,5 +42,26 @@ requirejs(['jquery', 'lib/web3', 'lib/Graduate', 'lib/queryParser', 'crypto-js/a
           alert(`Transaction success : ${transactionId}`);
         })
       });
+
+      $("#verify").click(function () {
+        const email = $("#query-email").val();
+        console.log("verify clicked");
+        console.log({
+          email
+        })
+        const graduateInstance = graduate.get();
+
+        graduateInstance.get.call(email, {
+          from: web3.eth.accounts[0]
+        }, function (err, transactionId) {
+          console.log({
+            log: "verify result",
+            err, transactionId
+          });
+
+          alert(`Verify success : ${transactionId}`);
+        })
+      });
+
     })
   });
