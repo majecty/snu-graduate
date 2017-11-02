@@ -1,9 +1,8 @@
 
 
-requirejs(['jquery'],
-  function ($) {
+requirejs(['jquery', 'lib/web3'],
+  function ($, web3) {
     $(document).ready(function () {
-      console.log("HI");
 
       $("#issue").click(function () {
         const name = $("#student-name").val();
