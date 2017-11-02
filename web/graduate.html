@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Hello World DApp</title>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+
+  <script src="../bower_components/jquery/dist/jquery.js"></script>
+  <script src="../bower_components/bootstrap/dist/js/bootstrap.js"></script>
+  <link rel="stylesheet" href="">
+  <link href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css' rel='stylesheet' type='text/css'>
+  <meta charset="utf-8">
+</head>
+
+<body class="container">
+  <h1>A Simple Hello World Voting Application</h1>
+
+  <div>
+    <h1>졸업 증명 추가</h1>
+
+
+    <div>
+      <div>
+        <div class="field-wrap">
+          <label>
+            이름
+          </label>
+          <input id="student-name" type="text" required autocomplete="off" />
+        </div>
+      </div>
+
+      <div class="field-wrap">
+        <label>
+          학번
+        </label>
+        <input id="student-id" type="text" required autocomplete="off" />
+      </div>
+
+      <div class="field-wrap">
+        <label>
+          비밀번호
+        </label>
+        <input id="student-password" type="password" required autocomplete="off" />
+      </div>
+      <button id="issue" class="button button-block" />올리기</button>
+    </div>
+  </div>
+
+  <div class="table-responsive">
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>Candidate</th>
+          <th>Votes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Rama</td>
+          <td id="candidate-1"></td>
+        </tr>
+        <tr>
+          <td>Nick</td>
+          <td id="candidate-2"></td>
+        </tr>
+        <tr>
+          <td>Jose</td>
+          <td id="candidate-3"></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <input type="text" id="candidate" />
+  <a href="#" onclick="voteForCandidate()" class="btn btn-primary">Vote</a>
+</body>
+<script src="https://cdn.rawgit.com/ethereum/web3.js/develop/dist/web3.js"></script>
+
+<script data-main="./main.js" src="../bower_components/requirejs/require.js"></script>
+
+</html>
