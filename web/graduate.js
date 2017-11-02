@@ -1,7 +1,7 @@
 
 
-requirejs(['jquery', 'lib/web3'],
-  function ($, web3) {
+requirejs(['jquery', 'lib/web3', 'lib/Graduate'],
+  function ($, web3, Graduate) {
     $(document).ready(function () {
 
       $("#issue").click(function () {
